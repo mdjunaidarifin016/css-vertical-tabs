@@ -65,5 +65,5 @@ This project uses HTML radio buttons to control the active tab.
 The purpose of this project is to practice CSS positioning, Flexbox, pseudo-classes, sibling selectors, transitions, and interactive UI design without JavaScript.
 
 ## 👨‍💻 Author
-
+-MD JUNAID ARIFIN
 Created as part of my HTML and CSS practice projects.
