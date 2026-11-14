@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dad3f8;
+}
+.container{
+    max-width: 950px;
+    width: 1000%;
+    background: #fff;
+    padding: 30px 50px 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .title{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px ;
+}
+.container .content .list{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20%;
+}
+.content .list label{
+    height: 60px;
+    /* background-color: red; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 2px;
+    z-index: 10;
+    transition: all 0.3s ease;
+
+}
+.content .list label:hover{
+    color: #6d50e2;
+}
+#home:checked ~ .list .home, 
+#blog:checked ~ .list .blog,
+#help:checked ~ .list .help,
+#code:checked ~ .list .code,
+#about:checked ~ .list .about{
+    color: #fff;
+}
+.content .indicator{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #6d50e2;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+}
+#home:checked ~ .list .indicator{
+    top: 0;
+}
+#blog:checked ~ .list .indicator{
+    top: 68px;
+}
+#help:checked ~ .list .indicator{
+    top: 132px;
+}
+#code:checked ~ .list .indicator{
+    top: 193px;
+}
+#about:checked ~ .list .indicator{
+    top: 260px;
+}
+.content input[type='radio']{
+    display: none;
+}
+.container .content .text-content{
+    width: 80%;
+    height: 100%;
+    margin-left: 20px;
+}
+.content .text-content .title{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.text-content .text{
+    display: none;
+}
+#home:checked ~ .text-content .home, 
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about{
+    display: block;
+}
+.content .text-content p{
+    text-align: justify;
+}
